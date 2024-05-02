@@ -1,0 +1,33 @@
+@import "../../css/vars.css";
+
+.navbar {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 50;
+  margin: 0 10%;
+}
+
+.header {
+  font-size: 30px;
+  font-weight: 700px;
+  color: var(--color-text);
+  text-decoration: none;
+}
+
+.menu {
+  display: flex;
+}
+
+.items {
+  display: flex;
+  gap: 50px;
+  list-style: none;
+}
+
+.items a {
+  font-size: 25px;
+  color: var(--color-text);
+  text-decoration: none;
+}
