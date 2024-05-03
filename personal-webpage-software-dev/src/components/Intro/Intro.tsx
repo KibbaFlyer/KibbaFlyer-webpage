@@ -12,7 +12,7 @@ const Intro = () => {
                 </p>
                 <a href="mailto:kristoffer.flygare@icloud.com" className={styles.contact}>Contact me</a>
             </div>
-            <img className={styles.image} src={"../../../src/assets/intro/kf.jpeg"}/>
+            <img className={styles.image} src={"../../../src/assets/intro/memoji.png"} alt="Memoji of me"/>
             <div className={styles.topBlur}/>
             <div className={styles.bottomBlur}/>
         </section>

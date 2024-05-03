@@ -1,0 +1,78 @@
+[
+    {
+      "title": "HTML",
+      "imageSrc": "../../src/assets/skills/html.png"
+    },
+    {
+      "title": "CSS",
+      "imageSrc": "../../src/assets/skills/css.png"
+    },
+    {
+      "title": "React",
+      "imageSrc": "../../src/assets/skills/React.png"
+    },
+    {
+      "title": "Node",
+      "imageSrc": "../../src/assets/skills/node.png"
+    },
+    {
+      "title": "C#",
+      "imageSrc": "../../src/assets/skills/csharp.png"
+    },
+    {
+      "title": "Dynamo",
+      "imageSrc": "../../src/assets/skills/dynamo.png"
+    },
+    {
+      "title": "Azure",
+      "imageSrc": "../../src/assets/skills/azure.png"
+    },
+    {
+      "title": "Azure Functions",
+      "imageSrc": "../../src/assets/skills/functionapps.png"
+    },
+    {
+      "title": "Node",
+      "imageSrc": "../../src/assets/skills/node.png"
+    },
+    {
+      "title": "Git",
+      "imageSrc": "../../src/assets/skills/git.png"
+    },
+    {
+      "title": ".NET",
+      "imageSrc": "../../src/assets/skills/netcore.png"
+    },
+    {
+      "title": "PostgreSQL",
+      "imageSrc": "../../src/assets/skills/postgresql.png"
+    },
+    {
+      "title": "Postman",
+      "imageSrc": "../../src/assets/skills/postman.png"
+    },
+    {
+      "title": "Power Automate",
+      "imageSrc": "../../src/assets/skills/powerautomate.png"
+    },
+    {
+      "title": "Rider",
+      "imageSrc": "../../src/assets/skills/rider.png"
+    },
+    {
+      "title": "SharePoint",
+      "imageSrc": "../../src/assets/skills/shp.png"
+    },
+    {
+      "title": "TypeScript",
+      "imageSrc": "../../src/assets/skills/ts.png"
+    },
+    {
+      "title": "Visual Studio",
+      "imageSrc": "../../src/assets/skills/vs.png"
+    },
+    {
+      "title": "Visual Studio Code",
+      "imageSrc": "../../src/assets/skills/vscode.png"
+    }
+  ]

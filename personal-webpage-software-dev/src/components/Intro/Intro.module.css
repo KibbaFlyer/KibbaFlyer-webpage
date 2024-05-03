@@ -49,7 +49,7 @@
 
 .contact {
   text-decoration: none;
-  background-color: var(--color-primary);
+  background-color: rgba(121, 161, 226, 0.5);
   color: var(--color-text);
   border-radius: 80px;
   font-size: 15px;
@@ -62,13 +62,11 @@
 .image {
   width: 50%;
   max-width: 500px;
-  border-radius: 2000px;
   z-index: 1;
   animation-name: floating;
-  animation-duration: 4s;
+  animation-duration: 3s;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
-  box-shadow: 0 0 6px 6px rgba(25, 55, 109, 0.7);
 }
 
 .topBlur {
@@ -81,6 +79,7 @@
   top: 100px;
   left: -10vw;
   border: 750px;
+  border-radius: 750px;
   background: rgba(25, 55, 109, 0.7);
   z-index: 0;
   filter: blur(100px);
@@ -90,7 +89,7 @@
   position: absolute;
   top: 250px;
   width: 70vw;
-  height: 50vw;
+  height: 30vw;
   min-width: 350px;
   top: 250px;
   right: -20vw;
@@ -113,10 +112,9 @@
   }
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1000px) {
     .container {
         flex-direction: column-reverse;
-
     }
     .content {
         align-items: center;
