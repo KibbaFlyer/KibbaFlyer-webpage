@@ -1,4 +1,3 @@
-import React from 'react';
 import styles from './Intro.module.css';
 
 const Intro = () => {
@@ -12,7 +11,7 @@ const Intro = () => {
                 </p>
                 <a href="mailto:kristoffer.flygare@icloud.com" className={styles.contact}>Contact me</a>
             </div>
-            <img className={styles.image} src={"../../../src/assets/intro/memoji.png"} alt="Memoji of me"/>
+            <img className={styles.image} src={"../../../public/assets/intro/memoji.png"} alt="Memoji of me"/>
             <div className={styles.topBlur}/>
             <div className={styles.bottomBlur}/>
         </section>

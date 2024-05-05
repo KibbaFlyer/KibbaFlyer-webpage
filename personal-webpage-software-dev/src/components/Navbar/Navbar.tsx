@@ -12,8 +12,8 @@ const Navbar: React.FC = () => {
                     className={styles.menuBtn}
                     src={
                         menuOpen
-                            ? "../../src/assets/navbar/closeIcon.png"
-                            : "../../src/assets/navbar/menuIcon.png"
+                            ? "../../public/assets/navbar/closeIcon.png"
+                            : "../../public/assets/navbar/menuIcon.png"
                     }
                     alt="menu-button"
                     onClick={() => setMenuOpen(!menuOpen)}

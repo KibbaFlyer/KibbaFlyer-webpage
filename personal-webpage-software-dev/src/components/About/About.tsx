@@ -6,13 +6,13 @@ const About = () => {
             <h2 className={styles.title}>About</h2>
             <div className={styles.content}>
                 <img 
-                src={"../../../src/assets/about/memoji.png"} 
+                src={"../../../public/assets/about/memoji.png"} 
                 alt="Memoji of me with a computer" 
                 className={styles.imageBig}/>
                 <ul className={styles.items}>
                     <li className={styles.aboutItem}>
                         <img 
-                        src={"../../../src/assets/about/cursor.png"} 
+                        src={"../../../public/assets/about/cursor.png"} 
                         alt="Cursor" 
                         className={styles.image}/>
                         <div>
@@ -24,7 +24,7 @@ const About = () => {
                     </li>
                     <li className={styles.aboutItem}>
                         <img 
-                        src={"../../../src/assets/about/backend.png"} 
+                        src={"../../../public/assets/about/backend.png"} 
                         alt="Backend" 
                         className={styles.image}/>
                         <div>
@@ -36,7 +36,7 @@ const About = () => {
                     </li>
                     <li className={styles.aboutItem}>
                         <img 
-                        src={"../../../src/assets/about/ui.png"} 
+                        src={"../../../public/assets/about/ui.png"} 
                         alt="UI" 
                         className={styles.image}/>
                         <div>
