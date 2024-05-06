@@ -4,11 +4,11 @@ import history from "../../data/history.json";
 
 const Experience = () => {
   return (
-<section className={styles.container} id="experience">
+    <section className={styles.container} id="experience">
       <h2 className={styles.title}>Experience</h2>
       <div className={styles.content}>
         <div className={styles.skills}>
-          {skills.map((skill, id) => {
+          {skills.sort((a, b) => a.title.localeCompare(b.title)).map((skill, id) => {
             return (
               <div key={id} className={styles.skill}>
                 <div className={styles.skillImageContainer}>
@@ -42,7 +42,7 @@ const Experience = () => {
         </ul>
       </div>
     </section>
-  )
+  );
 }
 
 export default Experience;
