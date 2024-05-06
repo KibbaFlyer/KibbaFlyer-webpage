@@ -11,6 +11,10 @@ const Education = () => {
             return (
               <li key={id} className={styles.education}>
                 <div className={styles.educationDetails}>
+                {education.imageSrc != null && <img
+                  src={education.imageSrc}
+                  alt={`${education.school} Logo`}
+                />}
                   <h3>{`${education.educationName}, ${education.school}`}</h3>
                   <p>{`${education.startDate} - ${education.endDate}`}</p>
                   <ul>

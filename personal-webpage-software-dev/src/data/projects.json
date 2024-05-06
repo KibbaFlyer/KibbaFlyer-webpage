@@ -1,26 +1,24 @@
 [
     {
-      "title": "Project A",
-      "imageSrc": "projects/project.png",
-      "description": "This is a project made to learn the latest languages by building an app.",
-      "skills": ["React", "Express", "Node"],
-      "demo": "https://www.example.com",
-      "source": "https://www.github.com"
+      "title": "Personal Site",
+      "imageSrc": "../../public/favicon.png",
+      "description": "This site! Made to exemplify my skills and talents.",
+      "skills": ["React", "Typescript", "VS Code","AWS S3"],
+      "demo": "http://kristoffer.flygare.xyz",
+      "source": "https://www.github.com/KibbaFlyer"
     },
     {
-      "title": "Project B",
-      "imageSrc": "projects/project.png",
-      "description": "This is a project made to learn the latest languages by building an app.",
-      "skills": ["React", "Express", "Node", "Sass"],
-      "demo": "https://www.example.com",
-      "source": "https://www.github.com"
+      "title": "Bimlist",
+      "imageSrc": "../../../assets/projects/bimlist-logomark.svg",
+      "description": "A project made to help people understand their BIM Models better",
+      "skills": ["React", "TypeScript", "ASP.NET", "Node", "Sass"],
+      "demo": "https://www.bimlist.com"
     },
     {
-      "title": "Project C",
-      "imageSrc": "projects/project.png",
-      "description": "This is a project made to learn the latest languages by building an app.",
-      "skills": ["React", "Express", "Node"],
-      "demo": "https://www.example.com",
-      "source": "https://www.github.com"
+      "title": "Cats Facts",
+      "description": "A small project part of a course assignment.",
+      "skills": ["React", "VS Code"],
+      "demo": "http://catfacts.flygare.xyz",
+      "source": "https://github.com/KibbaFlyer/ITHS-YH01384-LABB-1"
     }
   ]

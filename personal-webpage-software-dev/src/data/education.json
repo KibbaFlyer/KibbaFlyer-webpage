@@ -11,7 +11,8 @@
       "Physics", 
       "Programming",
       "and more.."
-    ]
+    ],
+    "imageSrc": null
   },
   {
     "educationName": "B.Sc. Energy Engineering",
@@ -26,8 +27,9 @@
       "Heat Transfer", 
       "Energy Systems", 
       "and more.."
-  ]
-  },
+  ],
+  "imageSrc": null
+},
   {
     "educationName": "Various Courses",
     "school": "Swedish universities",
@@ -40,6 +42,7 @@
       "Bitcoin, Blockchains (4,5 points)",
       "AI and ML (2,5 points)",
       "Databases SQL (7,5 points)"
-    ]
+    ],
+    "imageSrc": null
   }
 ]
