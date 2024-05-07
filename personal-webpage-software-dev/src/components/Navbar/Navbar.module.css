@@ -98,6 +98,7 @@
   border: none;
   font-size: 25px;
   font-weight: 700px;
+  -webkit-appearance: none;
 }
 
 .languageLabel:focus {
