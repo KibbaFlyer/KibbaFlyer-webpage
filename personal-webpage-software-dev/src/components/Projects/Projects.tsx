@@ -26,10 +26,10 @@ const Projects = () => {
                   </ul>
                   <div className={styles.linkDiv}>
                     <a href={project.demo}>
-                      <button>Demo</button>
+                      {project.demo != null && <button>Demo</button>}
                     </a>
                     <a href={project.source}>
-                      <button disabled={project.source == null}>Source</button>
+                      {project.source != null && <button>Source</button>}
                     </a>
                   </div>
                 </div>

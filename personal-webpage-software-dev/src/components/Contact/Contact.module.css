@@ -1,0 +1,51 @@
+.container {
+  position: relative;
+  background-color: rgba(12, 12, 12, 0.6);
+  color: var(--color-text);
+  border-radius: 15px;
+  padding: 70px;
+  z-index: 1;
+  margin-top: 40px;
+}
+
+.title {
+  letter-spacing: 1.75px;
+  color: var(--color-text);
+  text-transform: uppercase;
+}
+
+.infoDiv {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.detailsDiv {
+    padding-top:20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.detailsSubDiv {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+}
+
+.detailsDiv img {
+  width: 50px;
+}
+
+.detailsDiv a {
+  text-decoration: none;
+  color: var(--color-text);
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.detailsDiv p {
+  font-size: 20px;
+  font-weight: 500;
+}
