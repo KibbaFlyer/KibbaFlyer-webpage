@@ -1,8 +1,11 @@
 import React, { useState } from "react";
 import styles from './Navbar.module.css';
+import LanguageSwitcher from "./LanguageSwitcher";
+import { useTranslation } from 'react-i18next';
 
 const Navbar: React.FC = () => {
     const [menuOpen, setMenuOpen] = useState(false);
+    const { t } = useTranslation('Navbar');
 
     return (
         <div className={styles.navbarContainer}>
@@ -20,11 +23,12 @@ const Navbar: React.FC = () => {
                         onClick={() => setMenuOpen(!menuOpen)}
                     />
                     <ul className={`${styles.items} ${menuOpen && styles.menuOpen}`}>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#education">Education</a></li>
-                        <li><a href="#experience">Experience</a></li>
-                        <li><a href="#projects">Projects</a></li>
-                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#about">{t('about')}</a></li>
+                        <li><a href="#education">{t('education')}</a></li>
+                        <li><a href="#experience">{t('experience')}</a></li>
+                        <li><a href="#projects">{t('projects')}</a></li>
+                        <li><a href="#contact">{t('contact')}</a></li>
+                        <li><LanguageSwitcher /></li>
                     </ul>
                 </div>
             </nav>

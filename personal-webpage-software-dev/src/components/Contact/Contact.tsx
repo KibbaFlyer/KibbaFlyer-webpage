@@ -1,9 +1,11 @@
 import styles from "./Contact.module.css";
+import { useTranslation } from 'react-i18next';
 
 const Contact = () => {
+  const { t } = useTranslation('Contact');
   return (
     <div className={styles.container} id="contact">
-      <h2 className={styles.title}>Contact</h2>
+      <h2 className={styles.title}>{t('contact')}</h2>
       <div className={styles.detailsDiv}>
         <div>
           <div className={styles.detailsSubDiv}>
@@ -20,9 +22,9 @@ const Contact = () => {
           </div>
         </div>
         <div className={styles.infoDiv}>
-          <p>90408 Nürnberg, Germany</p>
+          <p>90408 Nürnberg, {t('germany')}</p>
           <p>
-            <a href="https://icons8.com">Icons provided by icons8.com</a>
+            <a href="https://icons8.com">{t('icons8')}</a>
           </p>
         </div>
       </div>

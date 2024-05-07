@@ -1,10 +1,31 @@
 import styles from './Education.module.css';
-import educations from "../../data/education.json";
+import educationsData from "../../data/education.json";
+import { useTranslation } from 'react-i18next';
+
+interface Education {
+  educationName: {
+    [key: string]: string;
+  };
+  school: {
+    [key: string]: string;
+  };
+  startDate: string;
+  endDate: string;
+  courses: {
+    [key: string]: string[];
+  };
+  imageSrc?: string;
+}
+
+const educations: Education[] = educationsData as unknown as Education[];
 
 const Education = () => {
+  const { t } = useTranslation('Education');
+  const currentLanguage = localStorage.getItem('i18nextLng') || 'en';
+
   return (
     <section className={styles.container} id="education">
-      <h2 className={styles.title}>Education</h2>
+      <h2 className={styles.title}>{t('education')}</h2>
       <div className={styles.content}>
         <ul className={styles.educations}>
         {educations.sort((a, b) => b.startDate.localeCompare(a.startDate)).map((education, id) => {
@@ -13,12 +34,12 @@ const Education = () => {
                 <div className={styles.educationDetails}>
                 {education.imageSrc != null && <img
                   src={education.imageSrc}
-                  alt={`${education.school} Logo`}
+                  alt={`${education.school[currentLanguage]} Logo`}
                 />}
-                  <h3>{`${education.educationName}, ${education.school}`}</h3>
+                  <h3>{`${education.educationName[currentLanguage]}, ${education.school[currentLanguage]}`}</h3>
                   <p>{`${education.startDate} - ${education.endDate}`}</p>
                   <ul>
-                    {education.courses.map((courses, id) => {
+                    {education.courses[currentLanguage].map((courses, id) => {
                       return <li key={id}>{courses}</li>;
                     })}
                   </ul>

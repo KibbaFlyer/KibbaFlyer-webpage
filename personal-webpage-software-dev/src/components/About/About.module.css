@@ -92,7 +92,7 @@
   font-size: 20px;
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1200px) {
   .container {
     background-color: transparent;
     padding-left: 0;

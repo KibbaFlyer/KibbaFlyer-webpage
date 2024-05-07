@@ -50,7 +50,7 @@
   font-weight: 500;
 }
 
-@media screen and (max-width: 830px) {
+@media screen and (max-width: 1200px) {
   .detailsSubDiv {
     flex-direction: row;
     align-items: left;

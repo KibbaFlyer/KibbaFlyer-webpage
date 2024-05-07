@@ -1,11 +1,32 @@
 import styles from './Experience.module.css';
 import skills from "../../data/skills.json";
-import history from "../../data/history.json";
+import historyData from "../../data/history.json";
+import { useTranslation } from 'react-i18next';
+
+interface History {
+  role: {
+    [key: string]: string;
+  };
+  organisation: string,
+  startDate: string;
+  endDate: {
+    [key: string]: string;
+  };
+  experiences: {
+    [key: string]: string[];
+  };
+  imageSrc?: string;
+}
+
+const history: History[] = historyData as unknown as History[];
 
 const Experience = () => {
+  const { t } = useTranslation('Experience');
+  const currentLanguage = localStorage.getItem('i18nextLng') || 'en';
+
   return (
     <section className={styles.container} id="experience">
-      <h2 className={styles.title}>Experience</h2>
+      <h2 className={styles.title}>{t('experience')}</h2>
       <div className={styles.content}>
         <div className={styles.skills}>
           {skills.sort((a, b) => a.title.localeCompare(b.title)).map((skill, id) => {
@@ -28,10 +49,10 @@ const Experience = () => {
                   alt={`${historyItem.organisation} Logo`}
                 />
                 <div className={styles.historyItemDetails}>
-                  <h3>{`${historyItem.role}, ${historyItem.organisation}`}</h3>
-                  <p>{`${historyItem.startDate} - ${historyItem.endDate}`}</p>
+                  <h3>{`${historyItem.role[currentLanguage]}, ${historyItem.organisation}`}</h3>
+                  <p>{`${historyItem.startDate} - ${historyItem.endDate[currentLanguage]}`}</p>
                   <ul>
-                    {historyItem.experiences.map((experience, id) => {
+                    {historyItem.experiences[currentLanguage].map((experience, id) => {
                       return <li key={id}>{experience}</li>;
                     })}
                   </ul>
