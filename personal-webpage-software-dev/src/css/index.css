@@ -1,3 +1,5 @@
+@import "./vars.css";
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -6,6 +8,23 @@
   font-family: "Outfit", Arial, Helvetica, sans-serif;
 }
 
-:target {
-  scroll-margin-top: 120px;
+ /* width */
+ ::-webkit-scrollbar {
+  width: 10px;
 }
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: var(--color-secondary);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--color-primary);
+  border-radius: 20px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-green);
+} 
