@@ -20,7 +20,7 @@ const Projects = () => {
                   <h3>{`${project.title}`}</h3>
                   <p>{`${project.description}`}</p>
                   <ul>
-                    {project.skills.map((skill, id) => {
+                  {project.skills.sort((a, b) => a.localeCompare(b)).map((skill, id) => {
                       return <li key={id}>{skill}</li>;
                     })}
                   </ul>
@@ -33,7 +33,9 @@ const Projects = () => {
                     </a>
                   </div>
                 </div>
+                
               </li>
+              
             );
           })}
         </ul>
