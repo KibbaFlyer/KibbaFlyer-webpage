@@ -47,6 +47,8 @@
   font-size: 18px;
   padding: 10px 20px;
   box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.25);
+  animation-name: pulse;
+  animation: pulse 3s infinite;
   cursor: pointer;
 }
 
@@ -84,6 +86,18 @@
   }
   100% {
     transform: translateY(0px);
+  }
+}
+
+@keyframes pulse {
+  0% {
+      transform: scale(1);
+  }
+  50% {
+      transform: scale(1.1);
+  }
+  100% {
+      transform: scale(1);
   }
 }
 

@@ -55,7 +55,7 @@ const About = () => {
                             alt="UI"
                             className={styles.image} />
                         <div>
-                            <h3>{t('lowCode')}e</h3>
+                            <h3>{t('lowcode')}</h3>
                             <p>
                                 {t('lowcodeText')}
                             </p>
