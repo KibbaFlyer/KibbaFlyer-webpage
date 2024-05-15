@@ -54,9 +54,6 @@ const Experience = () => {
         if (entry.isIntersecting) {
           entry.target.classList.add(styles.showImg);
           entry.target.classList.remove(styles.hiddenImg);
-        } else {
-          entry.target.classList.add(styles.hiddenImg);
-          entry.target.classList.remove(styles.showImg);
         }
       });
     })
