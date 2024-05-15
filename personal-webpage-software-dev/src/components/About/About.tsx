@@ -1,8 +1,32 @@
 import styles from './About.module.css';
 import { useTranslation } from 'react-i18next';
+import { useEffect } from 'react';
 
 const About = () => {
     const { t } = useTranslation('About');
+
+    useEffect(() => {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add(styles.show);
+                    entry.target.classList.remove(styles.hidden);
+                } else {
+                    entry.target.classList.add(styles.hidden);
+                    entry.target.classList.remove(styles.show);
+                  }
+            });
+        })
+
+        const hiddenElements = document.querySelectorAll(`.${styles.hidden}`);
+        hiddenElements.forEach((el) => observer.observe(el));
+
+        return () => {
+            hiddenElements.forEach((el) => observer.unobserve(el));
+        };
+    }, [])
+
+
 
     return (
         <section className={styles.container} id="about">
@@ -13,7 +37,7 @@ const About = () => {
                     alt="Memoji of me with a computer"
                     className={styles.imageBig} />
                 <ul className={styles.items}>
-                    <li className={styles.aboutItem}>
+                    <li className={`${styles.aboutItem} ${styles.hidden}`}>
                         <img
                             src={"../../../assets/about/crane.png"}
                             alt="Cursor"
@@ -25,7 +49,7 @@ const About = () => {
                             </p>
                         </div>
                     </li>
-                    <li className={styles.aboutItem}>
+                    <li className={`${styles.aboutItem} ${styles.hidden}`}>
                         <img
                             src={"../../../assets/about/frontend.png"}
                             alt="Cursor"
@@ -37,7 +61,7 @@ const About = () => {
                             </p>
                         </div>
                     </li>
-                    <li className={styles.aboutItem}>
+                    <li className={`${styles.aboutItem} ${styles.hidden}`}>
                         <img
                             src={"../../../assets/about/server.png"}
                             alt="Backend"
@@ -49,7 +73,7 @@ const About = () => {
                             </p>
                         </div>
                     </li>
-                    <li className={styles.aboutItem}>
+                    <li className={`${styles.aboutItem} ${styles.hidden}`}>
                         <img
                             src={"../../../assets/about/lowcode.png"}
                             alt="UI"

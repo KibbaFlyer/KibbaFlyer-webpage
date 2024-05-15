@@ -27,7 +27,6 @@
   margin-left: 20px;
 }
 
-
 @keyframes floating {
   0% {
     transform: translateY(0px);
@@ -110,5 +109,43 @@
   .aboutItem {
     padding-left: 0;
     padding-right: 0;
+  }
+}
+
+.hidden {
+  animation-name: slideOut;
+  animation-duration: 0.5s;
+}
+
+.show {
+  animation-name: slideIn;
+  animation-duration: 0.5s;
+}
+
+@keyframes slideOut {
+  0% {
+    transform: translateX(0%);
+    opacity: 100%;
+  }
+  100% {
+    transform: translateX(100%);
+    opacity: 0%;
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateX(100%);
+    opacity: 0%;
+  }
+  100% {
+    transform: translateX(0%);
+    opacity: 100%;
+  }
+}
+
+@media (prefers-reduced-motion) {
+  .hidden {
+    transition: none;
   }
 }

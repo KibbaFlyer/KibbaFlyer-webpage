@@ -2,6 +2,7 @@ import styles from './Experience.module.css';
 import skills from "../../data/skills.json";
 import historyData from "../../data/history.json";
 import { useTranslation } from 'react-i18next';
+import { useEffect } from 'react';
 
 interface History {
   role: {
@@ -24,6 +25,50 @@ const Experience = () => {
   const { t } = useTranslation('Experience');
   const currentLanguage = localStorage.getItem('i18nextLng') || 'en';
 
+  // Animation history
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add(styles.show);
+          entry.target.classList.remove(styles.hidden);
+        } else {
+          entry.target.classList.add(styles.hidden);
+          entry.target.classList.remove(styles.show);
+        }
+      });
+    })
+
+    const hiddenElements = document.querySelectorAll(`.${styles.hidden}`);
+    hiddenElements.forEach((el) => observer.observe(el));
+
+    return () => {
+      hiddenElements.forEach((el) => observer.unobserve(el));
+    };
+  }, [])
+
+  // Animation image skills
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add(styles.showImg);
+          entry.target.classList.remove(styles.hiddenImg);
+        } else {
+          entry.target.classList.add(styles.hiddenImg);
+          entry.target.classList.remove(styles.showImg);
+        }
+      });
+    })
+
+    const hiddenElements = document.querySelectorAll(`.${styles.hiddenImg}`);
+    hiddenElements.forEach((el) => observer.observe(el));
+
+    return () => {
+      hiddenElements.forEach((el) => observer.unobserve(el));
+    };
+  }, [])
+
   return (
     <section className={styles.container} id="experience">
       <h2 className={styles.title}>{t('experience')}</h2>
@@ -31,7 +76,7 @@ const Experience = () => {
         <div className={styles.skills}>
           {skills.sort((a, b) => a.title.localeCompare(b.title)).map((skill, id) => {
             return (
-              <div key={id} className={styles.skill}>
+              <div key={id} className={`${styles.skill} ${styles.hiddenImg}`}>
                 <div className={styles.skillImageContainer}>
                   <img src={skill.imageSrc} alt={skill.title} />
                 </div>
@@ -43,7 +88,7 @@ const Experience = () => {
         <ul className={styles.history}>
           {history.map((historyItem, id) => {
             return (
-              <li key={id} className={styles.historyItem}>
+              <li key={id} className={`${styles.historyItem} ${styles.hidden}`}>
                 <img
                   src={historyItem.imageSrc}
                   alt={`${historyItem.organisation} Logo`}
